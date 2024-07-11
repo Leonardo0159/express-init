@@ -5,7 +5,7 @@ const testeMiddleware = require('./middlewares/testeMiddleware');
 
 const router = express.Router();
 
-//Rotas Kits
+//Rotas
 router.get('/teste', testeController.getAll);
 router.post('/teste', testeMiddleware.validateMandatory, testeController.createTeste);
 router.delete('/teste/:id', testeController.deleteTeste);
